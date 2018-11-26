@@ -26,7 +26,15 @@
             <hr>
             
 
-
+            lat y long: {{clima.coord.lat}},{{clima.coord.lon}}
+            <br>
+            Pais: {{clima.sys.country}}
+            <br>
+            Amanece: {{clima.sys.sunrise | date:'HH:mm:ss'}}
+            <br>
+            Anochece: {{clima.sys.sunset | date:'HH:mm:ss'}}
+            <br>
+            Temperatura: {{kelvinCelsius(clima.main.temp)}}
             
 
             <br><br>
