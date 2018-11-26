@@ -15,28 +15,36 @@
     <!-- FILTROS -->
     <div class="container">
       <h1>Evaluacion</h1>
-      <h3>Angular 101</h3>
+      <h4>Angular 101</h4>
       <hr>
       <p>
         Nombre Completo:
         <br>
-        <input type="text" ng-model="nombre">
+        <input 
+          class="form-control" 
+          type="text" 
+          placeholder="Ingrese el nombre" ng-model="nombre" autofocus>
       </p>
       <p>
         Lugar de trabajo:
         <br>
-        <input type="text" ng-model="trabajo">
+        <input 
+          class="form-control" 
+          type="text" 
+          placeholder="Ingrese lugar de trabajo" ng-model="trabajo">
       </p>
       <p>
         Salario en Dolares:
         <br>
-        <input type="number" ng-model="salario">
+        <input 
+          class="form-control" 
+          type="number" placeholder="Ingrese salario" ng-model="salario">
       </p>
       <hr>
       <p>
         Nombre: {{nombre | uppercase}}
         <br>
-        Lugar de trabajo: {{trabajo}}
+        Lugar de trabajo: {{trabajo | lowercase}}
         <br>
         Con un salario de: {{salario | currency}}
       </p>
