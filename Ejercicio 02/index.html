@@ -5,7 +5,10 @@
     <title>Ejercicio 02 - Profesor</title>
 
     <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    
 
     <!-- Incluir AngularJS -->
     <script src="js/lib/angular.min.js"></script>
@@ -21,7 +24,7 @@
         <!-- Div que contiene la imagen del profesor -->
         <div class="col-sm-3">
           <section class="panel">
-            <div class="panel-body" align="center">
+            <div class="panel-body animated tada" align="center">
               <img
                 ng-src="{{profesor.foto}}"
                 class="img-circle"
@@ -46,7 +49,7 @@
           </section>
         </div>
       </div>
-      <div class="row" ng-show="mostrandoCaja">
+      <div class="row animated fadeIn fast" ng-show="mostrandoCaja">
         <div class="col-sm-6">
           <section class="panel">
             <div class="panel-body">
