@@ -2,14 +2,18 @@ var app = angular.module('universidadApp', []);
 app.controller('profesorCtrl', function($scope) {
   $scope.profesor = profesorData;
   $scope.editando = {};
+  $scope.mostrandoCaja = false;
   $scope.editarProfesor = function() {
     angular.copy($scope.profesor, $scope.editando);
+    $scope.mostrandoCaja = true;
   };
   $scope.guardar = function() {
     angular.copy($scope.editando, $scope.profesor);
+    $scope.mostrandoCaja = false;
   };
   $scope.cancelar = function() {
     $scope.editando = {};
+    $scope.mostrandoCaja = false;
   };
 });
 
