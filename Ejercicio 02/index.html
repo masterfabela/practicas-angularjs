@@ -14,7 +14,7 @@
   <body>
     <div class="container" ng-controller="profesorCtrl as profe">
       <h1>Profesor</h1>
-      <h4>{{ profe.profesor.nombre }}</h4>
+      <h4>{{ profesor.nombre }}</h4>
       <hr />
 
       <div class="row">
@@ -23,7 +23,7 @@
           <section class="panel">
             <div class="panel-body" align="center">
               <img
-                ng-src="{{profe.profesor.foto}}"
+                ng-src="{{profesor.foto}}"
                 class="img-circle"
                 alt=""
                 width="150px"
@@ -33,16 +33,36 @@
           </section>
         </div>
 
-        <!-- Div, donde se mostrará la bio del profesor -->
+        <!-- Div, donde se mostrará la bio del profesor --> 
         <div class="col-sm-9">
           <section class="panel">
             <div class="panel-body">
-              {{profe.profesor.bio}}
+              {{profesor.bio}}
               <br />
-              <strong>Edad:</strong> {{profe.profesor.edad}}
+              <strong>Edad:</strong> {{profesor.edad}} años
+              <br>
+              <button class="btn btn-primary" ng-click="editarProfesor()">Editar</button>
             </div>
           </section>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <section class="panel">
+            <div class="panel-body">
+              Nombre:
+              <input class="form-control" type="text" ng-model="editando.nombre">
+              <br>
+              Edad:
+              <input type="text" class="form-control" ng-model="editando.edad">
+              <br>
+              Bio:
+              <textarea class="form-control" rows="5" ng-model="editando.bio"></textarea>
+              <br>
+              <button class="btn btn-primary" ng-click="guardar()">Guardar</button>
+              <button class="btn btn-danger" ng-click="cancelar()">Cancelar</button>
+            </div>
+          </section>
       </div>
     </div>
   </body>

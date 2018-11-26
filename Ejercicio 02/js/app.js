@@ -1,6 +1,16 @@
 var app = angular.module('universidadApp', []);
-app.controller('profesorCtrl', function() {
-  this.profesor = profesorData;
+app.controller('profesorCtrl', function($scope) {
+  $scope.profesor = profesorData;
+  $scope.editando = {};
+  $scope.editarProfesor = function() {
+    angular.copy($scope.profesor, $scope.editando);
+  };
+  $scope.guardar = function() {
+    angular.copy($scope.editando, $scope.profesor);
+  };
+  $scope.cancelar = function() {
+    $scope.editando = {};
+  };
 });
 
 var profesorData = {
