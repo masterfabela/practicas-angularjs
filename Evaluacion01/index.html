@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Incluir angular-->
+    <script src="js/lib/angular.min.js"></script>
+
+  </head>
+  <body>
+
+    <!-- FILTROS -->
+    <div class="container">
+      <h1>Evaluacion</h1>
+      <h3>Angular 101</h3>
+      <hr>
+      <p>
+        Nombre Completo:
+        <br>
+        <input type="text" ng-model="nombre">
+      </p>
+      <p>
+        Lugar de trabajo:
+        <br>
+        <input type="text" ng-model="trabajo">
+      </p>
+      <p>
+        Salario en Dolares:
+        <br>
+        <input type="number" ng-model="salario">
+      </p>
+      <hr>
+      <p>
+        Nombre: {{nombre | uppercase}}
+        <br>
+        Lugar de trabajo: {{trabajo}}
+        <br>
+        Con un salario de: {{salario | currency}}
+      </p>
+    </div>
+
+  </body>
+</html>
