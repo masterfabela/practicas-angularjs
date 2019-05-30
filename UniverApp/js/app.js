@@ -1,9 +1,6 @@
-var app = angular.module('universidadApp', ['ngRoute']);
+var app = angular.module('universidadApp',[ ]);
 
-app.controller('mainCtrl', [
-  '$scope',
-  '$http',
-  function($scope, $http) {
-    $scope.menuSuperior = 'parciales/menu.html';
-  }
-]);
+app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
+  
+
+}]);
